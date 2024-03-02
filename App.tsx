@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -25,12 +25,30 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import { NativeModules } from 'react-native';
+
+const { MoviesApp } = NativeModules;
+
+
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
 function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+
+  useEffect(() => {
+    fetchDataFromApi();
+  }, []);
+
+  const fetchDataFromApi = async () => {
+    try {
+      const data = await MoviesApp.getMovies();
+      console.log('Data from API:', data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
   return (
     <View style={styles.sectionContainer}>
       <Text
