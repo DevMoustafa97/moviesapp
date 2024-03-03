@@ -29,6 +29,7 @@ import { NativeModules } from 'react-native';
 
 const { MoviesApp } = NativeModules;
 
+// console.log("module, heloooooooo", NativeModules)
 
 type SectionProps = PropsWithChildren<{
   title: string;

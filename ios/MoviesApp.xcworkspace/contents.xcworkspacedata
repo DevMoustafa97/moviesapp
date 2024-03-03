@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:RCTMoviesAppModule.h">
+   </FileRef>
+   <FileRef
       location = "group:MoviesApp.xcodeproj">
    </FileRef>
    <FileRef
