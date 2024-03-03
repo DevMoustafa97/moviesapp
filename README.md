@@ -46,25 +46,14 @@ The application relies on the following dependencies:
 
 - `@react-native-async-storage/async-storage`: For caching data locally.
 - `@react-native-community/netinfo`: For monitoring network connectivity.
-- `react`: React library for building UI components.
-- `react-native`: React Native framework for building mobile applications.
-- `react-native-community/refresh-control`: For implementing pull-to-refresh functionality.
-- `react-native-vector-icons`: For displaying icons in the application.
+
 
 ## Structure
 The application is structured as follows:
 
 - `src/`: Contains the source code of the application.
-  - `components/`: Contains reusable UI components.
-  - `hooks/`: Contains custom React hooks.
-  - `screens/`: Contains the main screens of the application.
-  - `types/`: Contains TypeScript type definitions.
+  - `moviesLis/`: Contains MoviesList component and its related hooks and type definitions
   - `App.tsx`: Entry point of the application.
 - `ios/`: Contains iOS-specific configuration and code.
 - `android/`: Contains Android-specific configuration and code.
 
-## Contributing
-Contributions to the MoviesApp project are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on GitHub.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.

@@ -1,8 +1,7 @@
-// useMoviesData.ts
 import { useEffect, useState } from 'react';
 import { ApiResponse } from './types';
-import AsyncStorage from '@react-native-async-storage/async-storage'; // Import AsyncStorage
-import NetInfo from '@react-native-community/netinfo'; // Import NetInfo
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import NetInfo from '@react-native-community/netinfo';
 
 import { NativeModules } from 'react-native';
 
