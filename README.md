@@ -1,79 +1,70 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# MoviesApp Documentation
 
-# Getting Started
+## Overview
+MoviesApp is a React Native application that allows users to browse a list of movies fetched from an API (Natively) . It provides functionalities to view details of each movie and supports offline mode with caching.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Features
+- Fetches a list of movies from an API endpoint
+- Displays movie details when a specific movie is clicked
+- Works in offline mode by caching data
+- Shows error state if no data or no internet connection
+- Pull-to-refresh functionality to update the movie list
 
-## Step 1: Start the Metro Server
+## Installation
+To run the MoviesApp locally, follow these steps:
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+   ```
 
-To start Metro, run the following command from the _root_ of your React Native project:
+2. Navigate to the project directory:
+   ```bash
+   cd MoviesApp
+   ```
 
-```bash
-# using npm
-npm start
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-# OR using Yarn
-yarn start
-```
+4. Run the application:
+   ```bash
+   npm start
+   ```
 
-## Step 2: Start your Application
+## Usage
+Once the application is running, you can:
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+- Browse the list of movies.
+- Click on a movie to view its details.
+- Pull down to refresh the movie list.
+- The application will automatically switch to offline mode if there's no internet connection.
 
-### For Android
+## Dependencies
+The application relies on the following dependencies:
 
-```bash
-# using npm
-npm run android
+- `@react-native-async-storage/async-storage`: For caching data locally.
+- `@react-native-community/netinfo`: For monitoring network connectivity.
+- `react`: React library for building UI components.
+- `react-native`: React Native framework for building mobile applications.
+- `react-native-community/refresh-control`: For implementing pull-to-refresh functionality.
+- `react-native-vector-icons`: For displaying icons in the application.
 
-# OR using Yarn
-yarn android
-```
+## Structure
+The application is structured as follows:
 
-### For iOS
+- `src/`: Contains the source code of the application.
+  - `components/`: Contains reusable UI components.
+  - `hooks/`: Contains custom React hooks.
+  - `screens/`: Contains the main screens of the application.
+  - `types/`: Contains TypeScript type definitions.
+  - `App.tsx`: Entry point of the application.
+- `ios/`: Contains iOS-specific configuration and code.
+- `android/`: Contains Android-specific configuration and code.
 
-```bash
-# using npm
-npm run ios
+## Contributing
+Contributions to the MoviesApp project are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on GitHub.
 
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## License
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
